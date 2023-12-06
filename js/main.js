@@ -98,5 +98,18 @@ posts.forEach(element => {
 }
 );
 
+const likeBtn = document.querySelectorAll(".like-button");
+const likes = document.querySelectorAll(".js-likes-counter")
+likeBtn.forEach((element, index) => {
 
+    element.addEventListener("click", function (event) {
 
+        event.preventDefault();
+
+        // this.classList.add("--liked");
+        element.style.color = "red";
+        likes[index].innerHTML = posts[index].likes + 1;
+    }
+    )
+}
+);
